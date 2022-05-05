@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SearchMovieApp</string>
+    <string name="director">Director</string>
+    <string name="released">Released</string>
+    <string name="genres">Genres</string>
+    <string name="actors">Actors</string>
+    <string name="time">Time</string>
+    <string name="_10">/10</string>
+    <string name="movie_search">Movie Search</string>
+</resources>

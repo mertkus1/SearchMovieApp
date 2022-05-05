@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.mertkus.searchmovieapp.domain.model.Search" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivItem"
+            loadImage="@{movie.poster}"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/searchview_background"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/circleImageViewStyle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="44dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@{movie.title}"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="128dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="30dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textCapSentences"
+            android:maxLines="2"
+            android:text="@{movie.year}"
+            android:textColor="#8D99AE"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="103dp"
+            android:layout_marginEnd="44dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="end"
+            android:text="@{movie.type}"
+            android:textColor="#8D99AE"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow" />
+
+    </androidx.cardview.widget.CardView>
+</layout>
