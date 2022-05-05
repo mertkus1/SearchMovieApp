@@ -99,9 +99,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
 
-    //Kotlin Extensions and Coroutines support for Room
-    implementation 'androidx.room:room-ktx:2.4.2'
-
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
 
