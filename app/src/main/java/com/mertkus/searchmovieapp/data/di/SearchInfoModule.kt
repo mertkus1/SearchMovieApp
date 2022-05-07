@@ -1,5 +1,6 @@
 package com.mertkus.searchmovieapp.data.di
 
+import com.mertkus.searchmovieapp.BuildConfig
 import com.mertkus.searchmovieapp.data.remote.SearchApi
 import com.mertkus.searchmovieapp.data.repository.SearchInfoRepositoryImpl
 import com.mertkus.searchmovieapp.domain.repository.SearchInfoRepository
@@ -41,7 +42,7 @@ object SearchInfoModule {
     @Singleton
     fun provideSearchApi(): SearchApi {
         return Retrofit.Builder()
-            .baseUrl("https://www.omdbapi.com/")
+            .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(SearchApi::class.java)
